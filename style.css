@@ -37,6 +37,7 @@ h3{font-size: var(--header3);}
 
 body{
     font-family: "Popins", sans-serif;
+    animation: opening 2s ease-in-out;
 }
 h1{
     font-size: var(--header1);
@@ -95,11 +96,46 @@ nav{
 }
 .hero-img{
     flex: 1 1 35rem;
-    
+    position: relative;
 }
-.hero-img img{
+
+.main-image img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+    height: 100%;  
+         
 }
+.main-image{
+    height: 90vh;
+
+}
+.png img{
+    width: 100%;
+}
+.png{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    animation: flower-entrance 1.5s ease-in-out forwards;
+
+}
+/* animation */
+@keyframes opening {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }  
+}
+
+@keyframes flower-entrance{
+    from{
+        transform: translateY(40%);
+    }
+    to{
+        transform: translateY(0%);
+
+    }
+}
+
+
