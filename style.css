@@ -81,10 +81,12 @@ nav{
     width: 95%;
     margin: 0 0 0 auto;
     display: flex;
+    flex-wrap: wrap;
 }
 .hero-intro{
     flex: 3 1 30rem;
     text-align: center;
+    min-height: 60vh;
 }
 .hero-intro h3{
     margin-bottom: 4rem;
@@ -93,6 +95,7 @@ nav{
     border: 3px solid black;
     margin: 3rem 0;
     padding: 1rem 2rem;
+    
 }
 .hero-img{
     flex: 1 1 35rem;
@@ -138,4 +141,17 @@ nav{
     }
 }
 
+@media  screen and (max-width:600px) {
+    .burger span{
+        padding: 0.2rem 1.8rem;
+        margin: 0.5rem;
+        background-color: var(--gray-text);
+        display: block;
 
+    }
+    .nav-links{
+        background-color: var(--background-color);
+        position: fixed;
+    }
+    
+}
