@@ -74,6 +74,7 @@ nav{
 }
 .main-head{
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.13);
+    
 }
 
 .hero{
@@ -140,18 +141,56 @@ nav{
 
     }
 }
-
-@media  screen and (max-width:600px) {
+.menu-check{
+    display: none;
+}
+@media  screen and (max-width:800px) {
+    
     .burger span{
         padding: 0.2rem 1.8rem;
-        margin: 0.5rem;
+        margin: 0.5rem 0;
         background-color: var(--gray-text);
         display: block;
 
     }
+    .nav-links a{
+        color: white;
+        font-size: var(--header4);
+    }
     .nav-links{
+        z-index: 1;
         background-color: var(--background-color);
         position: fixed;
+        width: 100%;
+        height: 20%;
+        top: 0%;
+        transform: translateY(-100%);
+        left: 0%;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 1s ease-in-out;
     }
+    .menu-check{
+        display:inline;
+        position: absolute;
+        top: 5%;
+        right: 4%;
+        transform: translate(5%,-50%); 
+        width: 5rem;
+        height: 4rem;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 10
+        
+    }
+    .menu-check:checked + .nav-links{
+        transform: translateY(0%);
+
+    }
+    .menu-check:checked ~ .burger span{
+        background: white;     
+    } 
+    
     
 }
+
