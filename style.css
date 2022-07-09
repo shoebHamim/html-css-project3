@@ -145,6 +145,9 @@ nav{
     display: none;
 }
 @media  screen and (max-width:800px) {
+    .hero{
+        width: 100%;
+    }
     
     .burger span{
         padding: 0.2rem 1.8rem;
