@@ -197,6 +197,44 @@ nav{
 
 
 
+.contact{
+    position: relative;
+    height: 100vh;
+    background: url('./images/pexels-jill-burrow-6070354.jpg');
+    background-size: cover;
+}
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.form-container h2{
+    color: tomato;
+    font-size: 5rem;
+    text-shadow: 2px 4px 8px black;
+}
+#input{
+    margin: 2rem 0 1rem 0;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    height: 3rem;
+    width: 25rem;
+
+}
+#submit{
+    background-color: tomato;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    cursor: pointer
+}
+#submit:hover{
+    background-color: rgb(209, 66, 41);
+}
+
+
+
 
 /* animation */
 @keyframes opening {
@@ -282,7 +320,6 @@ nav{
         height: 150vh;
         grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
     }
-    
 }
 
 
