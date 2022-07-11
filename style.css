@@ -270,7 +270,7 @@ nav{
         margin: 0.5rem 0;
         background-color: var(--gray-text);
         display: block;
-        
+        cursor: pointer;
 
     }
     .nav-links a{
@@ -290,36 +290,25 @@ nav{
         align-items: center;
         transition: transform 1s ease-in-out;
     }
-    .menu-check{
-        display:inline;
-        position: absolute;
-        top: 5%;
-        right: 4%;
-        transform: translate(5%,-50%); 
-        width: 5rem;
-        height: 4rem;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 10;
-        
-    }
-    .menu-check:checked + .nav-links{
+    
+    .nav-open{
         transform: translateY(0%);
 
     }
-    .menu-check:checked ~ .burger span:nth-child(2){
+    .toggle .line2{
         background-color: white;
        position: absolute;
        z-index: 20;
        top: 4%;
        right: 4.4%;
        width: 4rem;
-        transform: rotate(-45deg);         
+        transform: rotate(-45deg);  
+        transition: transform 1s ease-in-out;   
     } 
-    .menu-check:checked ~ .burger span:nth-child(3){
+    .toggle .line3{
         display: none;
     }
-    .menu-check:checked ~ .burger span:nth-child(1){
+    .toggle .line1{
         background-color: white;
        position: absolute;
        z-index: 20;
@@ -327,6 +316,8 @@ nav{
        right: 4.4%;
        width: 4rem;
         transform: rotate(45deg);  
+        transition: transform 1s ease-in-out;   
+
     }
 
 
